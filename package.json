@@ -24,6 +24,8 @@
   "homepage": "https://github.com/arnellebalane/citrine#readme",
   "devDependencies": {
     "ava": "1.1.0",
+    "esdoc": "1.1.0",
+    "esdoc-standard-plugin": "1.0.0",
     "eslint": "5.12.1",
     "eslint-config-arnellebalane": "5.0.0",
     "esm": "3.1.1",
