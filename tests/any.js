@@ -1,5 +1,5 @@
 import test from 'ava';
-import any from '.';
+import any from '../methods/any';
 
 test('no predicate given, return false if array is empty', t => {
     t.false(any([]));

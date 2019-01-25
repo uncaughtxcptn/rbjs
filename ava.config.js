@@ -3,6 +3,6 @@ export default {
 
     files: [
         'tests.js',
-        'methods/**/tests.js'
+        'tests/*.js'
     ]
 };
