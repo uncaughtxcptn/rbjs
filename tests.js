@@ -38,3 +38,8 @@ test('built-in methods return proxied instances', t => {
      */
     t.deepEqual([...doubled], [10, 12, 14]);
 });
+
+test('non-function properties return the correct values', t => {
+    const proxied = rbjs([1, 2, 3, 4, 5]);
+    t.is(proxied.length, 5);
+});
