@@ -9,7 +9,7 @@
  *  clear([1, 2, 3]); // => []
  *
  *  @example
- *  citrine([1, 2, 3]).clear(); // => []
+ *  rbjs([1, 2, 3]).clear(); // => []
  */
 
 // eslint-disable-next-line no-unused-vars
