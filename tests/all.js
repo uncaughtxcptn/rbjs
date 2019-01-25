@@ -1,5 +1,5 @@
 import test from 'ava';
-import all from '.';
+import all from '../methods/all';
 
 test('return true if array is empty', t => {
     t.true(all([]));
