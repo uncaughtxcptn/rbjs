@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/arnellebalane/citrine/issues"
   },
-  "homepage": "https://github.com/arnellebalane/citrine#readme"
+  "homepage": "https://github.com/arnellebalane/citrine#readme",
+  "devDependencies": {
+    "eslint": "5.12.1",
+    "eslint-config-arnellebalane": "5.0.0"
+  }
 }
