@@ -21,7 +21,8 @@ test('proxied array contains all defined methods', async t => {
     const proxied = citrine([]);
 
     methods.forEach(method => {
-        t.true(method in proxied);
-        t.is(typeof proxied[method], 'function');
+        const name = path.basename(method, '.js');
+        t.true(name in proxied);
+        t.is(typeof proxied[name], 'function');
     });
 });
