@@ -1,5 +1,5 @@
 import test from 'ava';
-import assoc from '../methods/assoc';
+import assoc from '.';
 
 test('return the first array whose first element is the given object', t => {
     t.deepEqual(
