@@ -1,7 +1,27 @@
-export default function citrine(array) {
-    if (!(array instanceof Array)) {
-        throw new TypeError('Argument "array" needs to be of type Array');
+import any from './any';
+
+const handlers = {
+    any
+};
+
+const treatAsProperties = [];
+
+export default function citrine(target) {
+    if (!(target instanceof Array)) {
+        return target;
     }
 
-    return new Proxy(array, {});
+    return new Proxy(array, {
+        get(target, property, receiver) {
+            if (property in handlers) {
+                const handler = handlers[property];
+
+                if (treatAsProperties(property)) {
+                    return handler(target);
+                } else {
+                    return handler.bind(null, target);
+                }
+            }
+        }
+    });
 }
