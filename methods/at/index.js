@@ -13,8 +13,8 @@
  *  at([1, 2, 3], -1); // 3
  *
  *  @example
- *  citrine([1, 2, 3]).at(1); // 2
- *  citrine([1, 2, 3]).at(-1); // 3
+ *  rbjs([1, 2, 3]).at(1); // 2
+ *  rbjs([1, 2, 3]).at(-1); // 3
  */
 export default function at(array, index) {
     if (index < 0) {
