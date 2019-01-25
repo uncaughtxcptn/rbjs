@@ -1,5 +1,5 @@
 import test from 'ava';
-import append from '../methods/append';
+import append from '.';
 
 test('add a single object to the end of the array', t => {
     t.deepEqual(
