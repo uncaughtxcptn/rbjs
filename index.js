@@ -4,17 +4,18 @@ const handlers = {
     any
 };
 
-export default function citrine(target) {
-    if (!(target instanceof Array)) {
-        return target;
+export default function citrine(toProxy) {
+    if (!(toProxy instanceof Array)) {
+        return toProxy;
     }
 
-    return new Proxy(array, {
-        get(target, property, receiver) {
+    return new Proxy(toProxy, {
+        get(target, property) {
             if (property in handlers) {
                 const handler = handlers[property];
                 return (...args) => citrine(handler(target, ...args));
             }
+            return target[property];
         }
     });
 }
