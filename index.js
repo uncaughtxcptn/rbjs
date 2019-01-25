@@ -17,9 +17,9 @@ export default function citrine(target) {
                 const handler = handlers[property];
 
                 if (treatAsProperties(property)) {
-                    return handler(target);
+                    return citrine(handler(target));
                 } else {
-                    return handler.bind(null, target);
+                    return (...args) => citrine(handler(target, ...args));
                 }
             }
         }
