@@ -2,12 +2,14 @@ import all from './methods/all';
 import any from './methods/any';
 import append from './methods/append';
 import assoc from './methods/assoc';
+import clear from './methods/clear';
 
 const handlers = {
     all,
     any,
     append,
-    assoc
+    assoc,
+    clear
 };
 
 export default function rbjs(toProxy) {
