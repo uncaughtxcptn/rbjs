@@ -11,7 +11,9 @@ export default function citrine(toProxy) {
 
     return new Proxy(toProxy, {
         get(target, property) {
-            if (property in handlers) {
+            if (property === '__citrine__') {
+                return true;
+            } else if (handlers.hasOwnProperty(property)) {
                 const handler = handlers[property];
                 return (...args) => citrine(handler(target, ...args));
             }
