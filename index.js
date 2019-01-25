@@ -1,7 +1,9 @@
 import any from './methods/any';
+import assoc from './methods/assoc';
 
 const handlers = {
-    any
+    any,
+    assoc
 };
 
 export default function citrine(toProxy) {
