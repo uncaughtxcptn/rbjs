@@ -20,7 +20,7 @@
  *  all([1, 'string', true], Boolean); // true
  *
  *  @example
- *  citrine([1, 'string', true]).all(Boolean); // true
+ *  rbjs([1, 'string', true]).all(Boolean); // true
  */
 export default function all(array, predicateOrPattern) {
     let predicate = predicateOrPattern;

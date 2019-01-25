@@ -1,5 +1,5 @@
 {
-  "name": "citrine",
+  "name": "rbjs",
   "version": "0.0.0",
   "description": "Augment JavaScript arrays with Ruby array methods, using Proxies",
   "main": "index.js",
@@ -17,12 +17,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arnellebalane/citrine.git"
+    "url": "git+https://github.com/arnellebalane/rbjs.git"
   },
   "bugs": {
-    "url": "https://github.com/arnellebalane/citrine/issues"
+    "url": "https://github.com/arnellebalane/rbjs/issues"
   },
-  "homepage": "https://github.com/arnellebalane/citrine#readme",
+  "homepage": "https://github.com/arnellebalane/rbjs#readme",
   "devDependencies": {
     "ava": "1.1.0",
     "esdoc": "1.1.0",
