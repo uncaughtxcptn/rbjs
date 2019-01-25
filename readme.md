@@ -7,11 +7,12 @@ Augment JavaScript arrays with Ruby array methods, using Proxies.
 
 Thanks for wanting to contribute to this project! Please follow these steps:
 
-1. Fork and clone this repository
-2. Install dependencies (`npm install`)
-3. Add your contributions ❤️
-4. Write tests for your added contributions
-5. Open a pull request to this repository
+1. Open an issue in this repository about the contribution to be made
+2. Fork and clone this repository
+3. Install dependencies (`npm install`)
+4. Add your contributions ❤️
+5. Write tests for your added contributions
+6. Open a pull request to this repository
 
 
 ## License
