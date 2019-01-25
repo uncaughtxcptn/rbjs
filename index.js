@@ -4,8 +4,6 @@ const handlers = {
     any
 };
 
-const treatAsProperties = [];
-
 export default function citrine(target) {
     if (!(target instanceof Array)) {
         return target;
@@ -15,12 +13,7 @@ export default function citrine(target) {
         get(target, property, receiver) {
             if (property in handlers) {
                 const handler = handlers[property];
-
-                if (treatAsProperties(property)) {
-                    return citrine(handler(target));
-                } else {
-                    return (...args) => citrine(handler(target, ...args));
-                }
+                return (...args) => citrine(handler(target, ...args));
             }
         }
     });
