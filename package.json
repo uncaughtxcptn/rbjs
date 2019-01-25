@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "lint": "eslint '**/*.js'",
+    "lint": "eslint --ignore-pattern docs '**/*.js'",
     "docs": "esdoc"
   },
   "keywords": [
