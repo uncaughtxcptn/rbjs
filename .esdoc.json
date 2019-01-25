@@ -1,0 +1,10 @@
+{
+  "source": "methods",
+  "destination": "docs",
+  "includes": ["\\.js$"],
+  "excludes": ["tests\\.js$"],
+  "index": "readme.md",
+  "plugins": [{
+    "name": "esdoc-standard-plugin"
+  }]
+}
