@@ -1,35 +1,42 @@
 import test from 'ava';
 import any from '../methods/any';
 
-test('no predicate given, return false if array is empty', t => {
+test('return false if array is empty', t => {
     t.false(any([]));
 });
 
-test('no predicate given, return false if all values are falsey', t => {
-    t.false(any([0, false, null, undefined]));
-});
-
-test('no predicate given, return true if a value is truthy', t => {
-    t.true(any([0, false, null, undefined, true]));
-});
-
-test('predicate given, return false if array is empty', t => {
-    t.false(any(
-        [],
-        item => Boolean(item)
-    ));
-});
-
-test('predicate given, return false if predicate always returns false', t => {
-    t.false(any(
-        [0, false, null, undefined],
-        item => Boolean(item)
-    ));
-});
-
-test('predicate given, return true if predicate returns true', t => {
+test('if predicate is given, return true if predicate returned any truthy value', t => {
     t.true(any(
-        [0, false, null, undefined, true],
-        item => Boolean(item)
+        [null, undefined, false, true],
+        Boolean
     ));
+});
+
+test('if predicate is given, return false if predicate always returned a falsy value', t => {
+    t.false(any(
+        [null, undefined, false],
+        Boolean
+    ));
+});
+
+test('if pattern is given, return true if any item is a string that matches the pattern', t => {
+    t.true(any(
+        [false, 'dogs', 1234],
+        /^\w{4}$/
+    ));
+});
+
+test('if pattern is given, return false if there is no string item', t => {
+    t.false(any(
+        [false, undefined, 1234],
+        /^\w{4}$/
+    ));
+});
+
+test('if predicate or pattern is not given, return true if any item is truthy', t => {
+    t.true(any([null, undefined, false, true]));
+});
+
+test('if predicate or pattern is not given, return false if all items are falsy', t => {
+    t.false(any([null, undefined, false]));
 });
