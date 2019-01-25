@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "lint": "eslint '**/*.js'"
+    "lint": "eslint '**/*.js'",
+    "docs": "esdoc"
   },
   "keywords": [
     "arrays",
