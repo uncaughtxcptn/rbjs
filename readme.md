@@ -1,4 +1,4 @@
-# citrine
+# rbjs
 
 Augment JavaScript arrays with Ruby array methods, using Proxies.
 

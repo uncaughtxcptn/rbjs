@@ -20,7 +20,7 @@
  *  any([null, undefined, true], Boolean); // true
  *
  *  @example
- *  citrine([null, undefined, true]).any(Boolean); // true
+ *  rbjs([null, undefined, true]).any(Boolean); // true
  */
 export default function any(array, predicateOrPattern) {
     let predicate = predicateOrPattern;

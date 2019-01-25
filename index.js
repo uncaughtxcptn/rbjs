@@ -8,18 +8,18 @@ const handlers = {
     assoc
 };
 
-export default function citrine(toProxy) {
+export default function rbjs(toProxy) {
     if (!(toProxy instanceof Array)) {
         return toProxy;
     }
 
     return new Proxy(toProxy, {
         get(target, property) {
-            if (property === '__citrine__') {
+            if (property === '__rbjs__') {
                 return true;
             } else if (handlers.hasOwnProperty(property)) {
                 const handler = handlers[property];
-                return (...args) => citrine(handler(target, ...args));
+                return (...args) => rbjs(handler(target, ...args));
             }
             return target[property];
         },

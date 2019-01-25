@@ -18,7 +18,7 @@
  *  // => ['letters', 'a', 'b', 'c']
  *
  *  @example
- *  citrine([
+ *  rbjs([
  *      ['colors', 'red', 'blue', 'green'],
  *      ['letters', 'a', 'b', 'c'],
  *      'foo'
