@@ -45,7 +45,7 @@ test('non-function properties return the correct values', t => {
 });
 
 test('custom methods are chainable', t => {
-    const proxied = citrine([
+    const proxied = rbjs([
         [1, 2, 3],
         [4, 5, 6]
     ], 4);
