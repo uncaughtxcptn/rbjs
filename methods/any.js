@@ -17,7 +17,15 @@
  *  @example
  *  citrine([null, undefined, true]).any(Boolean); // true
  */
-export default function any(array, predicate) {
-    predicate = predicate || (item => item);
+export default function any(array, predicateOrPattern) {
+    let predicate = predicateOrPattern;
+
+    if (predicateOrPattern instanceof RegExp) {
+        predicate = item => typeof item === 'string'
+            && predicateOrPattern.test(item);
+    } else if (!predicateOrPattern) {
+        predicate = item => item;
+    }
+
     return array.some(predicate);
 }
