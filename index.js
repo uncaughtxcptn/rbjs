@@ -1,4 +1,4 @@
-import any from './any';
+import any from './methods/any';
 
 const handlers = {
     any
