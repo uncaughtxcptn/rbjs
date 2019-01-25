@@ -4,6 +4,7 @@
   "description": "Augment JavaScript arrays with Ruby array methods, using Proxies",
   "main": "index.js",
   "scripts": {
+    "test": "ava",
     "lint": "eslint '**/*.js'"
   },
   "keywords": [
