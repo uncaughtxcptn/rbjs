@@ -16,6 +16,11 @@ export default function citrine(toProxy) {
                 return (...args) => citrine(handler(target, ...args));
             }
             return target[property];
+        },
+
+        has(target, property) {
+            return (property in handlers)
+                || (property in target);
         }
     });
 }
