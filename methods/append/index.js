@@ -11,8 +11,8 @@
  *  append([1, 2], 3, 4, 5); // => [1, 2, 3, 4, 5]
  *
  *  @example
- *  citrine([1, 2]).append(3); // => [1, 2, 3]
- *  citrine([1, 2]).append(3, 4, 5); // => [1, 2, 3, 4, 5]
+ *  rbjs([1, 2]).append(3); // => [1, 2, 3]
+ *  rbjs([1, 2]).append(3, 4, 5); // => [1, 2, 3, 4, 5]
  */
 export default function append(array, ...args) {
     return array.concat(args);
