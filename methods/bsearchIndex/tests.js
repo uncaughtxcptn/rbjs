@@ -1,7 +1,7 @@
 import test from 'ava';
 import bsearchIndex from '.';
 
-test('find-minimum mode: return the minimum item that makes the condition return true', t => {
+test('find-minimum mode: return index of minimum item that makes the condition return true', t => {
     t.is(bsearchIndex([1], x => x > 0), 0);
     t.is(bsearchIndex([0, 4, 7, 10, 12], x => x >= 4), 1);
     t.is(bsearchIndex([0, 4, 7, 10, 12], x => x >= 6), 2);
@@ -14,7 +14,7 @@ test('find-minimum mode: return null if no item makes the condition return true'
     t.is(bsearchIndex([0, 4, 7, 10, 12], x => x >= 100), null);
 });
 
-test('find-any mode: return any item that makes the condition return 0', t => {
+test('find-any mode: return index of any item that makes the condition return 0', t => {
     t.true([1, 2].includes(bsearchIndex(
         [0, 4, 7, 10, 12],
         x => 1 - Math.floor(x / 4)
