@@ -3,6 +3,7 @@ import any from './methods/any';
 import append from './methods/append';
 import assoc from './methods/assoc';
 import at from './methods/at';
+import bsearchIndex from './methods/bsearchIndex';
 import clear from './methods/clear';
 import collect from './methods/collect';
 
@@ -12,6 +13,7 @@ const handlers = {
     append,
     assoc,
     at,
+    bsearchIndex,
     clear,
     collect
 };
