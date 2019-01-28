@@ -20,8 +20,10 @@ export default function rbjs(toProxy) {
             } else if (handlers.hasOwnProperty(property)) {
                 const handler = handlers[property];
                 return (...args) => rbjs(handler(target, ...args));
+            } else if (typeof target[property] === 'function') {
+                return (...args) => rbjs(target[property](...args));
             }
-            return target[property];
+            return rbjs(target[property]);
         },
 
         has(target, property) {
