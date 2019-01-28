@@ -1,10 +1,12 @@
 import all from './methods/all';
 import any from './methods/any';
+import append from './methods/append';
 import assoc from './methods/assoc';
 
 const handlers = {
     all,
     any,
+    append,
     assoc
 };
 
