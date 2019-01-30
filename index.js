@@ -3,13 +3,16 @@ import any from './methods/any';
 import append from './methods/append';
 import assoc from './methods/assoc';
 import at from './methods/at';
+import clear from './methods/clear';
+
 
 const handlers = {
     all,
     any,
     append,
     assoc,
-    at
+    at,
+    clear
 };
 
 export default function rbjs(toProxy) {
