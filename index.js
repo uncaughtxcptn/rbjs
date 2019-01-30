@@ -7,6 +7,7 @@ import bsearch from './methods/bsearch';
 import bsearchIndex from './methods/bsearchIndex';
 import clear from './methods/clear';
 import collect from './methods/collect';
+import compact from './methods/compact';
 
 const handlers = {
     all,
@@ -17,7 +18,8 @@ const handlers = {
     bsearch,
     bsearchIndex,
     clear,
-    collect
+    collect,
+    compact
 };
 
 export default function rbjs(toProxy) {
