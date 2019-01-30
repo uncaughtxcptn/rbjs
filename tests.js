@@ -38,3 +38,20 @@ test('built-in methods return proxied instances', t => {
      */
     t.deepEqual([...doubled], [10, 12, 14]);
 });
+
+test('custom methods are chainable', t => {
+    const proxied = rbjs([
+        [1, 2, 3],
+        [4, 5, 6]
+    ], 4);
+    const result = proxied.assoc(4);
+
+    t.deepEqual([...result], [4, 5, 6]);
+    t.true('any' in result);
+    t.notThrows(() => result.any(Boolean));
+});
+
+test('non-function properties return the correct values', t => {
+    const proxied = rbjs([1, 2, 3, 4, 5]);
+    t.is(proxied.length, 5);
+});
