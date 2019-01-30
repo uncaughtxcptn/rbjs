@@ -19,5 +19,7 @@
  *  rbjs(['a', 'b', 'c']).collect(x => `${x}!`); // => ['a!', 'b!', 'c!']
  */
 export default function collect(array, callback) {
-    return array.map(callback);
+    return typeof callback === 'function'
+        ? array.map(callback)
+        : array;
 }
