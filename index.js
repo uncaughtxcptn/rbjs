@@ -4,7 +4,7 @@ import append from './methods/append';
 import assoc from './methods/assoc';
 import at from './methods/at';
 import clear from './methods/clear';
-
+import collect from './methods/collect';
 
 const handlers = {
     all,
@@ -12,7 +12,8 @@ const handlers = {
     append,
     assoc,
     at,
-    clear
+    clear,
+    collect
 };
 
 export default function rbjs(toProxy) {
