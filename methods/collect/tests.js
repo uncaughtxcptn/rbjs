@@ -12,3 +12,10 @@ test('return values returned by the given function when called with each array i
         ['a!', 'b!', 'c!']
     );
 });
+
+test('return the given array when no callback function is given', t => {
+    t.deepEqual(
+        collect([1, 2, 3]),
+        [1, 2, 3]
+    );
+});
