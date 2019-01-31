@@ -1,49 +1,44 @@
 import test from 'ava';
 import all from '.';
 
-test('return true if array is empty', t => {
+test('always returns true on empty array', t => {
     t.true(all([]));
 });
 
-test('if predicate is given, return true if predicate always returned a truthy value', t => {
+test('throws an error when more than two arguments are provided', t => {
+    t.throws(() => all([], Boolean, 1), Error);
+});
+
+test('without callback, returns true if no items are falsy', t => {
+    t.true(all([1, 'string', true]));
+});
+
+test('without callback, returns false if there are falsy items', t => {
+    t.false(all([1, 'string', true, false]));
+});
+
+test('with callback, returns true if the callback never returns a falsy value', t => {
     t.true(all(
         [1, 'string', true],
         Boolean
     ));
 });
 
-test('if predicate is given, return false if predicate returned any falsy value', t => {
+test('with callback, returns false if the callback ever returns a falsy value', t => {
     t.false(all(
         [1, 'string', true, false],
         Boolean
     ));
 });
 
-test('if pattern is given, return true if all items are strings that match the pattern', t => {
-    t.true(all(
-        ['cats', 'dogs', 'cows'],
-        /^\w{4}$/
-    ));
-});
+test('with callback, stops iterating once the return value is determined', t => {
+    const items = [];
+    const callback = item => {
+        items.push(item);
+        return Boolean(item);
+    };
 
-test('if pattern is given, return false if any item is not a string', t => {
-    t.false(all(
-        ['cats', 'dogs', 'cows', 1],
-        /^\w{4}$/
-    ));
-});
+    all([1, 'string', false, true, {}], callback);
 
-test('if pattern is given, return false if any string item does not match the pattern', t => {
-    t.false(all(
-        ['cats', 'dogs', 'birds'],
-        /^\w{4}$/
-    ));
-});
-
-test('if predicate or pattern is not given, return true if all items are truthy', t => {
-    t.true(all([1, 'string', true]));
-});
-
-test('if predicate or pattern is not given, return false if any item is falsy', t => {
-    t.false(all([1, 'string', true, false]));
+    t.deepEqual(items, [1, 'string', false]);
 });
