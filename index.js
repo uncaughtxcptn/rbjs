@@ -10,6 +10,7 @@ import collect from './methods/collect';
 import compact from './methods/compact';
 import concat from './methods/concat';
 import count from './methods/count';
+import cycle from './methods/cycle';
 
 const handlers = {
     all,
@@ -23,7 +24,8 @@ const handlers = {
     collect,
     compact,
     concat,
-    count
+    count,
+    cycle
 };
 
 export default function rbjs(toProxy) {
