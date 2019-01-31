@@ -6,5 +6,10 @@
   "index": "readme.md",
   "plugins": [{
     "name": "esdoc-standard-plugin"
+  }, {
+    "name": "esdoc-inject-style-plugin",
+    "option": {
+      "styles": ["./public/docs.css"]
+    }
   }]
 }
