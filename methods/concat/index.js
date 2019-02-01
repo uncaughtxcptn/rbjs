@@ -15,8 +15,8 @@
  * rbjs(['a', 'b']).concat(['c', 'd'], ['e'])  // => ['a', 'b', 'c', 'd', 'e']
  */
 export default function concat(array1, ...otherArrays) {
-    otherArrays.forEach(arr => {
-        array1.push(...arr);
+    otherArrays.filter(x => x instanceof Array).forEach(otherArray => {
+        array1.push(...otherArray);
     });
     return array1;
 }
