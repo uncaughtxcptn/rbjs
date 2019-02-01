@@ -5,10 +5,6 @@ test('always returns true on empty array', t => {
     t.true(all([]));
 });
 
-test('throws an error when more than two arguments are provided', t => {
-    t.throws(() => all([], Boolean, 1), Error);
-});
-
 test('without callback, returns true if no items are falsy', t => {
     t.true(all([1, 'string', true]));
 });

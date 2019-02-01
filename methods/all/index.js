@@ -18,9 +18,7 @@
  *  rbjs([1, 'string', true]).all(Boolean); // true
  */
 export default function all(array, predicate) {
-    if (arguments.length > 2) {
-        throw new Error('Too many arguments provided.');
-    } else if (!predicate) {
+    if (!predicate) {
         predicate = item => item;
     }
 
