@@ -1,8 +1,8 @@
 /**
  * Appends the elements of `otherArrays` into the given array.
  *
- * @param {Array} array1
- * @param {...any} otherArrays
+ * @param {Array} ary
+ * @param {...*} otherArrays
  *
  * @return {Array} Returns the array itself.
  *
@@ -14,9 +14,16 @@
  * rbjs([1, 2]).concat([3, 4]); // => [1, 2, 3, 4]
  * rbjs(['a', 'b']).concat(['c', 'd'], ['e'])  // => ['a', 'b', 'c', 'd', 'e']
  */
-export default function concat(array1, ...otherArrays) {
-    otherArrays.filter(x => x instanceof Array).forEach(otherArray => {
-        array1.push(...otherArray);
+export default function concat(ary, ...otherArrays) {
+    otherArrays.forEach(otherArray => {
+        try {
+            ary.push(...otherArray);
+        } catch (e) {
+            if (e instanceof TypeError) {
+                throw new TypeError('Members of `otherArrays` must be an array instance');
+            }
+            throw e;
+        }
     });
-    return array1;
+    return ary;
 }

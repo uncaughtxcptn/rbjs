@@ -58,3 +58,9 @@ test('returns self when given no arguments', t => {
         [1, 2]
     );
 });
+
+test('throws exception when arguments are not arrays', t => {
+    t.throws(() => {
+        concat([1, 2], 3);
+    }, TypeError);
+});
