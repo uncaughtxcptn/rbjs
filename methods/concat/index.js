@@ -16,14 +16,11 @@
  */
 export default function concat(ary, ...otherArrays) {
     otherArrays.forEach(otherArray => {
-        try {
-            ary.push(...otherArray);
-        } catch (e) {
-            if (e instanceof TypeError) {
-                throw new TypeError('Members of `otherArrays` must be an array instance');
-            }
-            throw e;
+        if (otherArray instanceof Array === false) {
+            throw new TypeError(
+                'Members of `otherArrays` must be an array instance');
         }
+        ary.push(...otherArray);
     });
     return ary;
 }
