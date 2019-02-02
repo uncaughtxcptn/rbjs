@@ -3,7 +3,7 @@ import concat from '.';
 
 test('returns the array itself', t => {
     const ary = [1, 2, 3];
-    t.deepEqual(
+    t.is(
         concat(ary, [4, 5, 6]),
         ary
     );
@@ -51,7 +51,7 @@ test('concatenates the initial value when given arguments contain multiple argum
     );
 });
 
-test('returns self when given no arguments', t => {
+test('returns self when given no other arrays', t => {
     const ary = [1, 2];
     t.deepEqual(
         concat(ary),
