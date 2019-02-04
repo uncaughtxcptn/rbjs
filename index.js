@@ -11,6 +11,7 @@ import compact from './methods/compact';
 import concat from './methods/concat';
 import count from './methods/count';
 import cycle from './methods/cycle';
+import deleteMethod from './methods/delete';
 
 const handlers = {
     all,
@@ -25,7 +26,8 @@ const handlers = {
     compact,
     concat,
     count,
-    cycle
+    cycle,
+    delete: deleteMethod
 };
 
 export default function rbjs(toProxy) {
