@@ -13,6 +13,7 @@ import count from './methods/count';
 import cycle from './methods/cycle';
 import deleteMethod from './methods/delete';
 import deleteAt from './methods/deleteAt';
+import deleteIf from './methods/deleteIf';
 
 const handlers = {
     all,
@@ -29,7 +30,8 @@ const handlers = {
     count,
     cycle,
     delete: deleteMethod,
-    deleteAt
+    deleteAt,
+    deleteIf
 };
 
 export default function rbjs(toProxy) {
