@@ -15,7 +15,7 @@
  *
  * @example
  * rbjs([1, 2, 3, 4]).count() // => 4
- * rbjs([1, 2, 3, 4]).count(e => e % 2 === 0) // => 2s
+ * rbjs([1, 2, 3, 4]).count(e => e % 2 === 0) // => 2
  */
 export default function count(array, predicate) {
     if (typeof predicate === 'function') {
