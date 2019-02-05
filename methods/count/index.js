@@ -7,6 +7,8 @@
  * @param {Array} array
  * @param {Function} predicate
  *
+ * @return {Number} Returns the number of elements
+ *
  * @example
  * count(['a', 'b', 'c'])  // => 3
  * count(['a', 'b', 'c'], e => e === 'b')  // => 1
