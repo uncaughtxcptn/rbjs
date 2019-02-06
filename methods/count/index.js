@@ -20,6 +20,8 @@
 export default function count(array, predicate) {
     if (typeof predicate === 'function') {
         return array.filter(predicate).length;
+    } else if (predicate !== undefined) {
+        return array.filter(e => e === predicate).length;
     }
     return array.length;
 }
