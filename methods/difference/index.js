@@ -14,9 +14,8 @@
 * difference([1, 'c', 'yep'], [1], [ 'a', 'c' ]);  // => ["yep"]
  */
 export default function difference(array, ...otherArrays) {
-    let resultArray = array.slice(0);
     otherArrays.forEach(otherArray => {
-        resultArray = resultArray.filter(i => otherArray.indexOf(i) <= -1);
+        array = array.filter(el => !otherArray.includes(el));
     });
-    return resultArray;
+    return array;
 }
