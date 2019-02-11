@@ -12,7 +12,9 @@
 * @example
 * difference([1, 1, 2, 2, 3, 3, 4, 5], [1, 2, 4]); // => [ 3, 3, 5 ]
 * difference([1, 'c', 'yep'], [1], [ 'a', 'c' ]);  // => ["yep"]
- */
+* @example
+* rbjs([1, 'c', 'yep']).difference([1], ['a', 'c']) // => ["yep"]
+*/
 export default function difference(array, ...otherArrays) {
     otherArrays.forEach(otherArray => {
         array = array.filter(el => !otherArray.includes(el));
