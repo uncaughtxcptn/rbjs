@@ -33,7 +33,7 @@ const handlers = {
     delete: deleteMethod,
     deleteAt,
     deleteIf,
-    difference,
+    difference
 };
 
 export default function rbjs(toProxy) {
