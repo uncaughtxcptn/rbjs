@@ -10,6 +10,10 @@ import collect from './methods/collect';
 import compact from './methods/compact';
 import concat from './methods/concat';
 import count from './methods/count';
+import cycle from './methods/cycle';
+import deleteMethod from './methods/delete';
+import deleteAt from './methods/deleteAt';
+import deleteIf from './methods/deleteIf';
 import difference from './methods/difference';
 
 const handlers = {
@@ -25,7 +29,11 @@ const handlers = {
     compact,
     concat,
     count,
-    difference
+    cycle,
+    delete: deleteMethod,
+    deleteAt,
+    deleteIf,
+    difference,
 };
 
 export default function rbjs(toProxy) {
