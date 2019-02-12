@@ -30,9 +30,14 @@ const METHODS_OUTPUT_DIR = path.resolve(__dirname, '../es5/methods');
     await rmrf(OUTPUT_DIR);
     await mkdir(METHODS_OUTPUT_DIR);
 
+    const babelOptions = {
+        presets: ['@babel/preset-env'],
+        plugins: ['add-module-exports']
+    };
+
     await Promise.all(transformMap.map(async ({input, output}) => {
         // Transform source file to ES5
-        const {code} = await babel.transformFileAsync(input);
+        const {code} = await babel.transformFileAsync(input, babelOptions);
 
         // Write transformed code to the output file
         // NOTE: We are doing additional transformation on the transformed
