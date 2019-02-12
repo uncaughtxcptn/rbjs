@@ -3,6 +3,16 @@
 Augment JavaScript arrays with Ruby array methods, using Proxies.
 
 
+## Installation
+
+This package is not in `npmjs.org` yet, so for now it can be installed directly
+from this repository.
+
+```bash
+$ npm install https://github.com/uncaughtxcptn/rbjs
+```
+
+
 ## Usage
 
 ```js
