@@ -12,6 +12,7 @@ import concat from './methods/concat';
 import count from './methods/count';
 import cycle from './methods/cycle';
 import deleteMethod from './methods/delete';
+import deleteAt from './methods/deleteAt';
 
 const handlers = {
     all,
@@ -27,7 +28,8 @@ const handlers = {
     concat,
     count,
     cycle,
-    delete: deleteMethod
+    delete: deleteMethod,
+    deleteAt
 };
 
 export default function rbjs(toProxy) {
