@@ -43,6 +43,16 @@ count([1, 2, 3], 2); // => 1
 The caveat of using `rbjs` this way is that the array to operate on needs to be
 passed as the first argument to the method being used.
 
+### ES5 build
+
+If you want to use the ES5 build of this library, they can be imported from the
+`es5` subdirectory.
+
+```js
+const rbjs = require('rbjs/es5');
+const count = require('rbjs/es5/methods/count');
+```
+
 
 ## Contributing
 
