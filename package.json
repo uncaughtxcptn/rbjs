@@ -6,7 +6,12 @@
   "scripts": {
     "test": "ava",
     "lint": "eslint --ignore-pattern docs '**/*.js'",
-    "docs": "esdoc"
+    "docs": "esdoc",
+    "clean": "rm -rf dist",
+    "build:methods": "babel --out-dir dist/methods methods",
+    "build:main": "babel --out-dir dist index.js",
+    "prebuild": "npm run clean",
+    "build": "npm run build:methods && npm run build:main"
   },
   "keywords": [
     "arrays",
