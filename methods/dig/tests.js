@@ -14,3 +14,20 @@ test('recurses array elements', t => {
     t.is(dig(array, 0, 1, 1), '3');
     t.is(dig(array, 0, -1, 0), 2);
 });
+
+
+test('returns the nested value specified if the sequence includes a key', t => {
+    const array = [[1, {foo: 'bar'}]];
+    t.is(dig(array, 0, 1, 'foo'), 'bar');
+});
+
+
+test('raises a TypeError for a non-numeric index', t => {
+    const array = ['a'];
+    t.throws(() => {
+        dig(array, null);
+    }, TypeError);
+    t.throws(() => {
+        dig(array, true);
+    });
+});
