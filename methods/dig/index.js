@@ -11,9 +11,12 @@
  * dig([[1, [2, 3]]], 0, 1, 1); // => 2
  *
  * @example
- *
+ * rbjs([[1, [2, 3]]]).dig(0, 1, 1); // => 2
  */
 export default function dig(array, ...indices) {
+    if (indices.length === 0) {
+        throw new TypeError('Invalid arguments');
+    }
     let element;
     while (indices.length > 0) {
         let index = indices.shift();
