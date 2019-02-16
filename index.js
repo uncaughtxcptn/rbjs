@@ -15,6 +15,7 @@ import deleteMethod from './methods/delete';
 import deleteAt from './methods/deleteAt';
 import deleteIf from './methods/deleteIf';
 import difference from './methods/difference';
+import dig from './methods/dig';
 import drop from './methods/drop';
 
 const handlers = {
@@ -35,6 +36,7 @@ const handlers = {
     deleteAt,
     deleteIf,
     difference,
+    dig,
     drop
 };
 
