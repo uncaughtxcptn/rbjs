@@ -14,6 +14,7 @@ $ npm install https://github.com/uncaughtxcptn/rbjs
 
 
 ## Usage
+For complete documentation, visit https://rbjs.uncaughtexception.wtf/
 
 ```js
 import rbjs from 'rbjs';
