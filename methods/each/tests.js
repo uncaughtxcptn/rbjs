@@ -31,3 +31,11 @@ test('throws TypeError if callback is not provided', t => {
 
     t.is(error.message, 'Parameter "callback" must be a function.');
 });
+
+test('returns the given array', t => {
+    const array = [1, 2, 3];
+    t.is(
+        each(array, x => console.log(x)),
+        array
+    );
+});
