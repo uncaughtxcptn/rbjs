@@ -15,6 +15,7 @@ import deleteMethod from './methods/delete';
 import deleteAt from './methods/deleteAt';
 import deleteIf from './methods/deleteIf';
 import difference from './methods/difference';
+import drop from './methods/drop';
 
 const handlers = {
     all,
@@ -33,7 +34,8 @@ const handlers = {
     delete: deleteMethod,
     deleteAt,
     deleteIf,
-    difference
+    difference,
+    drop
 };
 
 export default function rbjs(toProxy) {
