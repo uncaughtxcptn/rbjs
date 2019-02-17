@@ -48,6 +48,6 @@
     }
   },
   "lint-staged": {
-    "*.js": "npm run lint"
+    "*.js": "eslint"
   }
 }
