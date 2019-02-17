@@ -2,10 +2,10 @@ import drop from '../drop';
 
 /**
  * Drops elements up to, but not including, the first element
- * for which the block returns nil or false
+ * for which the predicate returns null or false
  * and returns an array containing the remaining elements.
  *
- * If no block is given, an Enumerator is returned instead.
+ * If no predicate is given, the array is returned instead.
  * @param {Array} array
  * @param {Function} predicate
  *
@@ -21,9 +21,6 @@ export default function dropWhile(array, predicate) {
     if (!predicate) {
         return array;
     }
-    let index = 0;
-    while (predicate(array[index])) {
-        index++;
-    }
+    const index = array.findIndex(x => !predicate(x));
     return drop(array, index);
 }
