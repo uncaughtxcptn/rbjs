@@ -17,6 +17,7 @@ import deleteIf from './methods/deleteIf';
 import difference from './methods/difference';
 import dig from './methods/dig';
 import drop from './methods/drop';
+import dropWhile from './methods/dropWhile';
 
 const handlers = {
     all,
@@ -37,7 +38,8 @@ const handlers = {
     deleteIf,
     difference,
     dig,
-    drop
+    drop,
+    dropWhile
 };
 
 export default function rbjs(toProxy) {
