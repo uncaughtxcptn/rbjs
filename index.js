@@ -18,6 +18,7 @@ import difference from './methods/difference';
 import dig from './methods/dig';
 import drop from './methods/drop';
 import dropWhile from './methods/dropWhile';
+import each from './methods/each';
 
 const handlers = {
     all,
@@ -39,7 +40,8 @@ const handlers = {
     difference,
     dig,
     drop,
-    dropWhile
+    dropWhile,
+    each
 };
 
 export default function rbjs(toProxy) {
