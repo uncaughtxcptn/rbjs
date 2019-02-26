@@ -34,8 +34,5 @@ test('throws TypeError if callback is not provided', t => {
 
 test('returns the given array', t => {
     const array = [1, 2, 3];
-    t.is(
-        each(array, x => console.log(x)),
-        array
-    );
+    t.is(each(array, x => x), array);
 });
