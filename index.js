@@ -19,6 +19,7 @@ import dig from './methods/dig';
 import drop from './methods/drop';
 import dropWhile from './methods/dropWhile';
 import each from './methods/each';
+import eachIndex from './methods/eachIndex';
 
 const handlers = {
     all,
@@ -41,7 +42,8 @@ const handlers = {
     dig,
     drop,
     dropWhile,
-    each
+    each,
+    eachIndex
 };
 
 export default function rbjs(toProxy) {
