@@ -20,6 +20,7 @@ import drop from './methods/drop';
 import dropWhile from './methods/dropWhile';
 import each from './methods/each';
 import eachIndex from './methods/eachIndex';
+import eql from './methods/eql';
 
 const handlers = {
     all,
@@ -43,7 +44,8 @@ const handlers = {
     drop,
     dropWhile,
     each,
-    eachIndex
+    eachIndex,
+    eql
 };
 
 export default function rbjs(toProxy) {
